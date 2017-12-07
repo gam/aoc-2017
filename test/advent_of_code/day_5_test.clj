@@ -9,3 +9,7 @@
 
 (deftest day-5-second-challenge
   (is (= (solve-2 puzzle-input) 10)))
+
+(deftest day-5-solutions
+  (is (= (solve-1 (build-dataset)) 373160))
+  (is (= (solve-2 (build-dataset)) 26395586)))
