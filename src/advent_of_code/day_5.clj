@@ -9,10 +9,10 @@
 (defn resolve-maze [steps index path]
   (if (>= index (count path))
     steps
-     (let [value (get path index)]
-       (recur (inc steps)
-              (+ index value)
-              (assoc path index (update-function value))))))
+    (let [value (get path index)]
+      (recur (inc steps)
+             (+ index value)
+             (assoc path index (update-function value))))))
 
 (defn- dec-or-inc [value]
   (if (> value 2)
