@@ -2,7 +2,10 @@
   (require [clojure.string :refer [split-lines]]))
 
 (defn build-dataset []
-  (mapv #(Integer/parseInt %) (split-lines (slurp "resources/day-5-input.txt"))))
+  (->> "resources/day-5-input.txt"
+       slurp
+       split-lines
+       (mapv #(Integer/parseInt %))))
 
 (declare ^:dynamic update-function)
 
