@@ -1,5 +1,5 @@
 (ns advent-of-code.day-6
-  (require [clojure.string :refer [split-lines split join]]))
+  (require [clojure.string :refer [split-lines split]]))
 
 (defn- split-line [line]
   (split line #"\s+"))
